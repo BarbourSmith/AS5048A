@@ -48,7 +48,7 @@ void AS5048A::init(){
   * • High speed: 0 to 3.4 MHz clock frequency (slave mode)
   */
   settings = SPISettings(1000000, MSBFIRST, SPI_MODE1);
-  SPI2 = SPIClass(HSPI);
+  SPI2 = SPIClass(VSPI);
  // initialization of the Slave Select pin if the LOW slave interacts with the master if the HIGH slave ignores the signals from the master
   pinMode(_cs, OUTPUT);
   //SPI has an internal SPI-device counter, it is possible to call "begin()" from different devices
